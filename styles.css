@@ -270,3 +270,57 @@ html[data-theme="dark"] .alert.is-error { background: #3f1d1d; border-color: #7f
 
 /* Section scroll offset for sticky header */
 section { scroll-margin-top: 90px; }
+
+/* Blog & Legal Content Styles */
+.article-content, .legal-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+.article-content h1, .legal-content h1 {
+  font-size: var(--fs-600);
+  margin-bottom: var(--space-6);
+  color: var(--brand-900);
+}
+.article-content h2, .legal-content h2 {
+  font-size: var(--fs-400);
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-4);
+  color: var(--brand-500);
+}
+.article-content h3, .legal-content h3 {
+  font-size: var(--fs-300);
+  margin-top: var(--space-6);
+  color: var(--text-900);
+}
+.article-content p, .legal-content p,
+.article-content ul, .legal-content ul {
+  color: var(--text-700);
+  margin-bottom: var(--space-4);
+}
+.article-content ul, .legal-content ul {
+  padding-right: var(--space-6);
+}
+.article-content li, .legal-content li {
+  margin-bottom: var(--space-2);
+}
+
+/* Comparison Table */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-8) 0;
+  font-size: 0.95rem;
+}
+.comparison-table th, .comparison-table td {
+  border: 1px solid var(--border);
+  padding: 12px;
+  text-align: center;
+  color: var(--text-700);
+}
+.comparison-table th {
+  background-color: var(--bg-200);
+  font-weight: 700;
+  color: var(--brand-900);
+}
