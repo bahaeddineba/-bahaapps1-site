@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>الصفحة غير موجودة - BahaApps</title>
+    <meta name="description" content="عذراً، الصفحة التي تبحث عنها غير موجودة." />
+    <meta name="theme-color" content="#0e2a47" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6743079408038742"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .error-page {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .error-title {
+            font-size: 6rem;
+            font-weight: 800;
+            color: var(--brand-500);
+            margin: 0;
+            line-height: 1;
+        }
+
+        .error-subtitle {
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+
+        .error-text {
+            color: var(--text-500);
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header" id="top">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">BahaApps</a>
+            <div class="header-actions">
+                <button id="themeToggle" class="btn btn--ghost">🌙</button>
+                <a href="index.html" class="btn btn--primary">عودة للرئيسية</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section error-page">
+            <div class="container">
+                <h1 class="error-title">404</h1>
+                <h2 class="error-subtitle">عذراً، الصفحة غير موجودة</h2>
+                <p class="error-text">يبدو أن الرابط الذي اتبعته معطل أو أن الصفحة قد أزيلت.</p>
+                <a href="index.html" class="btn btn--primary btn--shine">العودة للصفحة الرئيسية</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const $ = (s) => document.querySelector(s);
+        const html = document.documentElement;
+        const themeToggle = $('#themeToggle');
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) html.setAttribute('data-theme', savedTheme);
+        themeToggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            themeToggle.textContent = next === 'dark' ? '☀️' : '🌙';
+        });
+        themeToggle.textContent = html.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
+    </script>
+</body>
+
+</html>
