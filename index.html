@@ -51,18 +51,18 @@
           <span class="nav__bar"></span>
         </button>
         <ul class="nav__list" id="primaryMenu">
-          <li><a href="#home">الرئيسية</a></li>
+          <li><a href="index.html" class="is-active">الرئيسية</a></li>
           <li><a href="#services">خدماتنا</a></li>
           <li><a href="#portfolio">أعمالنا</a></li>
           <li><a href="blog/index.html">المدونة</a></li>
-          <li><a href="#about">من نحن</a></li>
-          <li><a href="#contact">اتصل بنا</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="contact.html">اتصل بنا</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
         <button id="themeToggle" class="btn btn--ghost" aria-label="تبديل الوضع الداكن">🌙</button>
-        <a href="#contact" class="btn btn--primary btn--shine">اطلب عرض سعر</a>
+        <a href="contact.html" class="btn btn--primary btn--shine">اطلب عرض سعر</a>
       </div>
     </div>
   </header>
@@ -80,7 +80,7 @@
           <p class="hero__subtitle">نُصمّم ونُطوّر تطبيقات iOS وAndroid بمعايير أداء، أمان، وتجربة استخدام عالمية — مع
             دعم عربي كامل واتجاه RTL.</p>
           <div class="hero__actions">
-            <a href="#contact" class="btn btn--primary btn--shine">ابدأ الآن</a>
+            <a href="contact.html" class="btn btn--primary btn--shine">ابدأ الآن</a>
             <a href="#portfolio" class="btn btn--secondary">استعرض أعمالنا</a>
           </div>
           <ul class="hero__bullets">
@@ -280,7 +280,7 @@
               <li>تصميم جاهز</li>
               <li>إطلاق خلال 2–4 أسابيع</li>
             </ul>
-            <a href="#contact" class="btn btn--secondary">اطلب التفاصيل</a>
+            <a href="contact.html" class="btn btn--secondary">اطلب التفاصيل</a>
           </div>
           <div class="price-card price-card--featured reveal">
             <h3 class="price-card__title">شركة ناشئة</h3>
@@ -290,7 +290,7 @@
               <li>تكامل APIs</li>
               <li>اختبارات وضمان جودة</li>
             </ul>
-            <a href="#contact" class="btn btn--primary btn--shine">ابدأ الآن</a>
+            <a href="contact.html" class="btn btn--primary btn--shine">ابدأ الآن</a>
           </div>
           <div class="price-card reveal">
             <h3 class="price-card__title">مؤسسات</h3>
@@ -300,7 +300,7 @@
               <li>تكامل أنظمة داخلية</li>
               <li>دعم وصيانة</li>
             </ul>
-            <a href="#contact" class="btn btn--secondary">اتصل بنا</a>
+            <a href="contact.html" class="btn btn--secondary">اتصل بنا</a>
           </div>
         </div>
       </div>
@@ -314,28 +314,26 @@
           <p class="section__subtitle">فريق عربي بخبرة عملية في بناء منتجات رقمية ناجحة وقابلة للتوسع.</p>
         </header>
         <div class="about grid grid--2cols">
-          <div class="reveal">
-            <p>نعمل وفق أفضل ممارسات الصناعة ومعايير المتاجر الرسمية لضمان قبول التطبيق بسرعة واستمرارية تشغيله بكفاءة.
+          <div class="reveal" style="text-align: center; grid-column: 1 / -1;">
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 30px auto;">
+              نحن نعمل وفق أفضل ممارسات الصناعة ومعايير المتاجر الرسمية. فريقنا المتخصص يجمع بين الخبرة التقنية والرؤية
+              الإبداعية لتحويل الأفكار إلى منتجات رقمية ناجحة.
             </p>
-            <ul class="list list--check">
-              <li>خبرة في Flutter, React Native, Swift, Kotlin</li>
-              <li>CI/CD ونشر تلقائي</li>
-              <li>تحليلات ومراقبة أداء</li>
-            </ul>
-          </div>
-          <div class="stats">
-            <div class="stat reveal">
-              <div class="stat__num">+20</div>
-              <div class="stat__label">تطبيقات</div>
+            <div class="stats" style="margin-bottom: 30px;">
+              <div class="stat reveal">
+                <div class="stat__num">+20</div>
+                <div class="stat__label">تطبيقات</div>
+              </div>
+              <div class="stat reveal">
+                <div class="stat__num">+15</div>
+                <div class="stat__label">عملاء</div>
+              </div>
+              <div class="stat reveal">
+                <div class="stat__num">4.8/5</div>
+                <div class="stat__label">رضا العملاء</div>
+              </div>
             </div>
-            <div class="stat reveal">
-              <div class="stat__num">+15</div>
-              <div class="stat__label">عملاء</div>
-            </div>
-            <div class="stat reveal">
-              <div class="stat__num">4.8/5</div>
-              <div class="stat__label">رضا العملاء</div>
-            </div>
+            <a href="about.html" class="btn btn--secondary">اقرأ المزيد عنا</a>
           </div>
         </div>
       </div>
@@ -344,58 +342,13 @@
     <!-- Contact -->
     <section id="contact" class="section">
       <div class="container">
-        <header class="section__header">
-          <h2 class="section__title">اتصل بنا</h2>
-          <p class="section__subtitle">أخبرنا عن فكرتك وسنعود إليك بخطة مناسبة وتكلفة تقديرية.</p>
-        </header>
-
-        <form class="form" id="contactForm" action="https://formsubmit.co/bahadjili111@gmail.com" method="POST"
-          novalidate>
-          <!-- FormSubmit options -->
-          <input type="hidden" name="_subject" value="رسالة جديدة من موقع BahaApps">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-
-          <div class="grid grid--2cols form__grid">
-            <div class="form__field">
-              <label for="name">الاسم الكامل</label>
-              <input type="text" id="name" name="name" required placeholder="مثال: أحمد خالد" />
-              <small class="error" data-for="name"></small>
-            </div>
-            <div class="form__field">
-              <label for="email">البريد الإلكتروني</label>
-              <input type="email" id="email" name="email" required placeholder="example@mail.com" />
-              <small class="error" data-for="email"></small>
-            </div>
-            <div class="form__field">
-              <label for="phone">رقم الهاتف (اختياري)</label>
-              <input type="tel" id="phone" name="phone" placeholder="05xxxxxxxx" />
-            </div>
-            <div class="form__field">
-              <label for="project">نوع المشروع</label>
-              <select id="project" name="project" required>
-                <option value="" selected disabled>اختر نوع المشروع</option>
-                <option>تطبيق تجارة إلكترونية</option>
-                <option>تطبيق خدمات</option>
-                <option>تطبيق تعليمي</option>
-                <option>آخر</option>
-              </select>
-              <small class="error" data-for="project"></small>
-            </div>
-            <div class="form__field form__field--full">
-              <label for="message">وصف مختصر</label>
-              <textarea id="message" name="message" rows="5" required
-                placeholder="صف فكرتك، الميزات الأساسية، والموعد المتوقع"></textarea>
-              <small class="error" data-for="message"></small>
-            </div>
-          </div>
-          <div class="form__actions">
-            <button type="submit" class="btn btn--primary btn--shine">إرسال</button>
-            <p class="form__note">سنرد عليك خلال 24–48 ساعة عمل.</p>
-          </div>
-          <div class="alert" id="formAlert" role="status" aria-live="polite" hidden></div>
-        </form>
+        <div class="container" style="text-align: center;">
+          <header class="section__header">
+            <h2 class="section__title">جاهز لبدء مشروعك؟</h2>
+            <p class="section__subtitle">نحن هنا لمساعدتك. تواصل معنا اليوم لتحصل على استشارة مجانية.</p>
+          </header>
+          <a href="contact.html" class="btn btn--primary btn--shine btn--lg">تواصل معنا</a>
+        </div>
       </div>
     </section>
   </main>
@@ -513,52 +466,8 @@
     });
     backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-    // Contact form validation + send via FormSubmit
-    const contactForm = $('#contactForm');
-    const showError = (name, msg) => {
-      const el = $(`.error[data-for="${name}"]`);
-      if (el) el.textContent = msg || '';
-    };
-    contactForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      let valid = true;
-      const data = new FormData(contactForm);
-      const name = data.get('name')?.toString().trim();
-      const email = data.get('email')?.toString().trim();
-      const project = data.get('project');
-      const message = data.get('message')?.toString().trim();
-      showError('name', ''); showError('email', ''); showError('project', ''); showError('message', '');
-      if (!name) { showError('name', 'يرجى إدخال الاسم'); valid = false; }
-      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('email', 'يرجى إدخال بريد صحيح'); valid = false; }
-      if (!project) { showError('project', 'يرجى اختيار نوع المشروع'); valid = false; }
-      if (!message) { showError('message', 'يرجى كتابة وصف مختصر'); valid = false; }
-
-      const alertBox = $('#formAlert');
-      alertBox.hidden = false;
-
-      if (!valid) {
-        alertBox.className = 'alert is-error';
-        alertBox.textContent = 'تحقق من الحقول المطلوبة.';
-        return;
-      }
-
-      try {
-        const res = await fetch(contactForm.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
-        if (res.ok) {
-          alertBox.className = 'alert is-success';
-          alertBox.textContent = 'تم استلام رسالتك بنجاح. سنعاود التواصل قريباً.';
-          contactForm.reset();
-          window.setTimeout(() => { alertBox.hidden = true; }, 4000);
-        } else {
-          throw new Error('Network');
-        }
-      } catch (err) {
-        alertBox.className = 'alert is-error';
-        alertBox.textContent = 'تعذر الإرسال حالياً. حاول لاحقاً أو تواصل عبر البريد مباشرة.';
-        try { contactForm.submit(); } catch (_) { }
-      }
-    });
   </script>
+  <script src="cookie-banner.js"></script>
 </body>
 
 </html>

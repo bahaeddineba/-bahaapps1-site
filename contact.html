@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>اتصل بنا - BahaApps</title>
+    <meta name="description"
+        content="تواصل مع BahaApps لبدء مشروع تطبيقك القادم. نحن هنا للإجابة على استفساراتك وتحويل أفكارك إلى واقع." />
+    <meta name="theme-color" content="#0e2a47" />
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6743079408038742"
+        crossorigin="anonymous"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header class="site-header" id="top">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" aria-label="BahaApps">BahaApps</a>
+
+            <nav class="nav" aria-label="الملاحة الرئيسية">
+                <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="primaryMenu"
+                    aria-label="فتح/إغلاق القائمة">
+                    <span class="nav__bar"></span>
+                    <span class="nav__bar"></span>
+                    <span class="nav__bar"></span>
+                </button>
+                <ul class="nav__list" id="primaryMenu">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="index.html#services">خدماتنا</a></li>
+                    <li><a href="index.html#portfolio">أعمالنا</a></li>
+                    <li><a href="blog/index.html">المدونة</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="contact.html" class="is-active">اتصل بنا</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button id="themeToggle" class="btn btn--ghost" aria-label="تبديل الوضع الداكن">🌙</button>
+                <!-- Removed "Get Quote" button here since we are on the contact page -->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <header class="section__header">
+                    <h1 class="section__title">اتصل بنا</h1>
+                    <p class="section__subtitle">أخبرنا عن فكرتك وسنعود إليك بخطة مناسبة وتكلفة تقديرية.</p>
+                </header>
+
+                <form class="form" id="contactForm" action="https://formsubmit.co/bahadjili111@gmail.com" method="POST"
+                    novalidate>
+                    <!-- FormSubmit options -->
+                    <input type="hidden" name="_subject" value="رسالة جديدة من موقع BahaApps">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+                    <div class="grid grid--2cols form__grid">
+                        <div class="form__field">
+                            <label for="name">الاسم الكامل</label>
+                            <input type="text" id="name" name="name" required placeholder="مثال: أحمد خالد" />
+                            <small class="error" data-for="name"></small>
+                        </div>
+                        <div class="form__field">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" required placeholder="example@mail.com" />
+                            <small class="error" data-for="email"></small>
+                        </div>
+                        <div class="form__field">
+                            <label for="phone">رقم الهاتف (اختياري)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="05xxxxxxxx" />
+                        </div>
+                        <div class="form__field">
+                            <label for="project">نوع المشروع</label>
+                            <select id="project" name="project" required>
+                                <option value="" selected disabled>اختر نوع المشروع</option>
+                                <option>تطبيق تجارة إلكترونية</option>
+                                <option>تطبيق خدمات</option>
+                                <option>تطبيق تعليمي</option>
+                                <option>آخر</option>
+                            </select>
+                            <small class="error" data-for="project"></small>
+                        </div>
+                        <div class="form__field form__field--full">
+                            <label for="message">وصف مختصر</label>
+                            <textarea id="message" name="message" rows="5" required
+                                placeholder="صف فكرتك، الميزات الأساسية، والموعد المتوقع"></textarea>
+                            <small class="error" data-for="message"></small>
+                        </div>
+                    </div>
+                    <div class="form__actions">
+                        <button type="submit" class="btn btn--primary btn--shine">إرسال</button>
+                        <p class="form__note">سنرد عليك خلال 24–48 ساعة عمل.</p>
+                    </div>
+                    <div class="alert" id="formAlert" role="status" aria-live="polite" hidden></div>
+                </form>
+
+                <div style="margin-top: 50px; text-align: center;">
+                    <p><strong>البريد الإلكتروني:</strong> bahadjili111@gmail.com</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer__grid">
+            <div>
+                <div class="logo">BahaApps</div>
+                <p class="muted">نبني تطبيقات تحقق أثراً حقيقياً لعملك.</p>
+            </div>
+            <nav aria-label="روابط سفلية">
+                <ul class="footer__links">
+                    <li><a href="index.html#services">الخدمات</a></li>
+                    <li><a href="index.html#portfolio">الأعمال</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="contact.html">تواصل</a></li>
+                    <li><a href="blog/index.html">المدونة</a></li>
+                    <li><a href="privacy-policy.html">سياسة الخصوصية</a></li>
+                    <li><a href="terms.html">شروط الاستخدام</a></li>
+                </ul>
+            </nav>
+            <div class="social" aria-label="تابعنا">
+                <a href="#" aria-label="تويتر" title="Twitter" style="display:inline-flex">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M22.162 5.656c-.77.342-1.597.572-2.465.676a4.298 4.298 0 0 0 1.887-2.373 8.59 8.59 0 0 1-2.725 1.04 4.287 4.287 0 0 0-7.305 3.91 12.164 12.164 0 0 1-8.831-4.477 4.284 4.284 0 0 0 1.326 5.721 4.26 4.26 0 0 1-1.944-.537v.054a4.287 4.287 0 0 0 3.44 4.2 4.305 4.305 0 0 1-1.936.073 4.289 4.289 0 0 0 4.004 2.977A8.59 8.59 0 0 1 2 18.407a12.12 12.12 0 0 0 6.574 1.927c7.889 0 12.206-6.535 12.206-12.206 0-.186-.004-.372-.013-.557a8.714 8.714 0 0 0 2.134-2.224z" />
+                    </svg>
+                </a>
+                <a href="#" aria-label="لينكدإن" title="LinkedIn" style="display:inline-flex">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M4.983 3.5C4.983 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.483 1.12 2.483 2.5zM.5 8h4V23h-4V8zm7 0h3.837v2.047h.054c.534-1.012 1.84-2.08 3.787-2.08C20.42 8 23 10.42 23 14.52V23h-4v-7.273c0-1.735-.035-3.965-2.415-3.965-2.417 0-2.786 1.886-2.786 3.833V23h-4V8z" />
+                    </svg>
+                </a>
+                <a href="#" aria-label="GitHub" title="GitHub" style="display:inline-flex">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 .5C5.648.5.5 5.648.5 12c0 5.086 3.292 9.385 7.862 10.899.575.104.786-.25.786-.556 0-.275-.01-1.007-.015-1.978-3.198.695-3.874-1.542-3.874-1.542-.523-1.33-1.278-1.685-1.278-1.685-1.044-.714.08-.699.08-.699 1.153.081 1.76 1.185 1.76 1.185 1.027 1.76 2.695 1.251 3.35.957.104-.744.402-1.252.73-1.54-2.554-.29-5.238-1.277-5.238-5.685 0-1.256.45-2.284 1.185-3.09-.119-.289-.513-1.454.112-3.03 0 0 .966-.31 3.166 1.181a10.98 10.98 0 0 1 2.883-.388c.978.005 1.963.132 2.883.388 2.2-1.492 3.165-1.181 3.165-1.181.625 1.576.231 2.741.113 3.03.736.806 1.184 1.834 1.184 3.09 0 4.419-2.688 5.392-5.251 5.676.414.357.783 1.062.783 2.14 0 1.545-.014 2.792-.014 3.173 0 .308.21.665.792.553C20.21 21.381 23.5 17.084 23.5 12 23.5 5.648 18.352.5 12 .5z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="container footer__bottom">
+            <small>جميع الحقوق محفوظة © BahaApps 2024</small>
+        </div>
+    </footer>
+
+    <script src="cookie-banner.js"></script>
+
+    <script>
+        // Helper: select
+        const $ = (s, root = document) => root.querySelector(s);
+        const $$ = (s, root = document) => [...root.querySelectorAll(s)];
+
+        // Theme toggle with localStorage
+        const html = document.documentElement;
+        const themeToggle = $('#themeToggle');
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) html.setAttribute('data-theme', savedTheme);
+        themeToggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            themeToggle.textContent = next === 'dark' ? '☀️' : '🌙';
+        });
+        themeToggle.textContent = html.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
+
+        // Mobile nav toggle
+        const navToggle = $('#navToggle');
+        const primaryMenu = $('#primaryMenu');
+        navToggle.addEventListener('click', () => {
+            const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', String(!expanded));
+            primaryMenu.classList.toggle('is-open');
+        });
+
+        // Contact form validation + send via FormSubmit
+        const contactForm = $('#contactForm');
+        const showError = (name, msg) => {
+            const el = $(`.error[data-for="${name}"]`);
+            if (el) el.textContent = msg || '';
+        };
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            let valid = true;
+            const data = new FormData(contactForm);
+            const name = data.get('name')?.toString().trim();
+            const email = data.get('email')?.toString().trim();
+            const project = data.get('project');
+            const message = data.get('message')?.toString().trim();
+            showError('name', ''); showError('email', ''); showError('project', ''); showError('message', '');
+            if (!name) { showError('name', 'يرجى إدخال الاسم'); valid = false; }
+            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('email', 'يرجى إدخال بريد صحيح'); valid = false; }
+            if (!project) { showError('project', 'يرجى اختيار نوع المشروع'); valid = false; }
+            if (!message) { showError('message', 'يرجى كتابة وصف مختصر'); valid = false; }
+
+            const alertBox = $('#formAlert');
+            alertBox.hidden = false;
+
+            if (!valid) {
+                alertBox.className = 'alert is-error';
+                alertBox.textContent = 'تحقق من الحقول المطلوبة.';
+                return;
+            }
+
+            try {
+                const res = await fetch(contactForm.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+                if (res.ok) {
+                    alertBox.className = 'alert is-success';
+                    alertBox.textContent = 'تم استلام رسالتك بنجاح. سنعاود التواصل قريباً.';
+                    contactForm.reset();
+                    window.setTimeout(() => { alertBox.hidden = true; }, 4000);
+                } else {
+                    throw new Error('Network');
+                }
+            } catch (err) {
+                alertBox.className = 'alert is-error';
+                alertBox.textContent = 'تعذر الإرسال حالياً. حاول لاحقاً أو تواصل عبر البريد مباشرة.';
+                try { contactForm.submit(); } catch (_) { }
+            }
+        });
+    </script>
+</body>
+
+</html>
