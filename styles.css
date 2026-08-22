@@ -306,6 +306,28 @@ section { scroll-margin-top: 90px; }
   margin-bottom: var(--space-2);
 }
 
+/* Advertising placements */
+.ad-slot {
+  margin: var(--space-10) auto;
+  max-width: 100%;
+  text-align: center;
+}
+.ad-slot__label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-500);
+  font-size: 0.75rem;
+  line-height: 1;
+}
+.ad-slot--display { margin-bottom: 40px; }
+.ad-slot--infeed {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 200px;
+}
+.ad-slot--infeed .adsbygoogle { width: 100%; }
+
 /* Comparison Table */
 .comparison-table {
   width: 100%;

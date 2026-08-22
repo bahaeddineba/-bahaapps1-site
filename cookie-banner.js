@@ -1,10 +1,7 @@
-(function() {
-    // Check if the user has already accepted cookies
-    if (localStorage.getItem('cookieConsent') === 'true') {
-        return;
-    }
+(function () {
+    const noticeKey = 'cookieNoticeDismissed';
+    if (localStorage.getItem(noticeKey) === 'true') return;
 
-    // Create banner element
     const banner = document.createElement('div');
     banner.id = 'cookie-consent-banner';
     banner.style.position = 'fixed';
@@ -24,16 +21,15 @@
     banner.style.flexWrap = 'wrap';
     banner.style.gap = '10px';
 
-    // Content
     const text = document.createElement('p');
     text.style.margin = '0';
     text.style.fontSize = '0.9rem';
     text.style.flex = '1';
-    text.innerHTML = 'نحن نستخدم ملفات تعريف الارتباط لتحسين تجربتك على موقعنا. من خلال الاستمرار في التصفح، فإنك توافق على <a href="/privacy-policy.html" style="color: #4da3ff; text-decoration: underline;">سياسة الخصوصية</a> الخاصة بنا.';
+    text.innerHTML = 'يستخدم هذا الموقع ملفات تعريف الارتباط وإعلانات Google. اطّلع على <a href="/privacy-policy.html" style="color: #93c5fd; text-decoration: underline;">سياسة الخصوصية</a> لمعرفة كيفية استخدام البيانات وخياراتك.';
 
-    // Button
     const button = document.createElement('button');
-    button.textContent = 'موافق';
+    button.type = 'button';
+    button.textContent = 'فهمت';
     button.style.backgroundColor = '#2563eb'; // var(--brand-600)
     button.style.color = '#fff';
     button.style.border = 'none';
@@ -44,14 +40,12 @@
     button.style.fontSize = '0.9rem';
     button.style.whiteSpace = 'nowrap';
     
-    // Hover effect
     button.addEventListener('mouseenter', () => button.style.backgroundColor = '#1d4ed8');
     button.addEventListener('mouseleave', () => button.style.backgroundColor = '#2563eb');
 
-    // Click handler
-    button.addEventListener('click', function() {
-        localStorage.setItem('cookieConsent', 'true');
-        banner.style.display = 'none';
+    button.addEventListener('click', function () {
+        localStorage.setItem(noticeKey, 'true');
+        banner.remove();
     });
 
     banner.appendChild(text);
